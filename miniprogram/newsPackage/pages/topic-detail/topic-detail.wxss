@@ -1,0 +1,78 @@
+
+.share-f{
+	padding:10rpx 15rpx;
+	border-radius:10rpx;
+	border:1rpx solid #ccc;
+}
+
+/*列表*/
+.f-list {
+  width:100%;
+}
+.item-box{
+/*  padding: 6rpx 10px;*/
+  border-bottom: 1rpx solid #ccc;
+}
+.item-image{
+  justify-content: center;
+  align-items: center;
+  flex-basis:200rpx;
+}
+.item-image image{
+  width:200rpx;
+  height:150rpx;
+}
+.item-des{
+    height:100%;
+    overflow:hidden;
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    padding: 10rpx 20rpx;
+}
+.item-des .greet{
+  height:100rpx;
+  flex-basis: 120rpx;
+  justify-content: center;
+  align-items: center;
+}
+.item-des .p-info{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.p-des {
+  font-family: 'PingFang-SC-Regular,Helvetica,sans-serif';
+  font-size: 26rpx;
+  margin-top:20rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+/*推荐*/
+.share-box{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 50%;
+  background: rgba(0,0,0,.5);
+  position:absolute;
+  top:13%; 
+  right: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:#fff;
+}
+.share-box button {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.1;
+  z-index: 99;
+}
+

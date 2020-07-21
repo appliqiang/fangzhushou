@@ -1,0 +1,20 @@
+<navsearch id='navsearch' title="装修公司" show-icon='false'></navsearch>
+<view class="container">
+   <view class='loupan'>
+      <view class='mt20 jz-list'>
+           <view class="jizhuang-box" wx:for="{{decorate}}" wx:for-item="item" wx:key="index" data-id="{{item.decorate_id}}" 
+                bindtap="viewDecorateDetail">
+             <view class="image-box">
+               <image src="{{item.thumbnail}}" style="width:180rpx;height:90rpx;"></image>
+             </view>
+             <view class="info-box relative" style="height:120rpx;">
+               <view>{{item.name}}</view>
+               <view class="flex-start mt30">
+                  <image src="../../images/location.png" style="width:25rpx;height:30rpx;"></image>
+                  <text class="decorate-address fs28 color-dark-grep1">{{item.address}}</text>
+               </view>
+             </view>
+           </view>
+      </view>
+  </view>
+</view>

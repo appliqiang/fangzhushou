@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "navsearch": "/components/navsearch/navsearch"
+    },
+    "navigationBarTitleText": "装修公司"
+}

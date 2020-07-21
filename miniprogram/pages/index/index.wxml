@@ -1,0 +1,61 @@
+<view class="user_info_wrap">
+      <view class='inner' wx:if="{{userInfo.avatarUrl !=0}}">
+        <image class="user_icon" src="{{userInfo.avatarUrl}}" ></image>
+        <view class="nickname">
+          {{ userInfo.nickName }}
+        </view>
+      </view>
+      <view class='inner' wx:else>
+          <image class="user_icon" src="../../images/avatar.jpg" ></image>
+          <view class="nickname">
+            <button class='fs28' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 点击显示头像 </button>
+            <view wx:else>请升级微信版本</view>
+          </view>
+      </view>
+</view>
+
+<view class="user_content">
+    <view class="user_main">
+        <view class="history_wrap">
+            <!-- <view class='tabs flex-center'>
+                <navigator url="/pages/collect/index">
+                    <view class="his_num">{{topics}}</view>
+                    <view class="his_name fs28">话题讨论</view>
+                </navigator>
+                <navigator>
+                    <view class="his_num">0</view>
+                    <view class="his_name fs28">我的关注</view>
+                </navigator>
+                <navigator>
+                    <view class="his_num">0</view>
+                    <view class="his_name fs28">消息提醒</view>
+                </navigator>
+            </view> -->
+            <view class='add-info mt20'>
+                <image src="/images/add/swiper_2.jpg" style="width:100%;height:90rpx;"></image>
+            </view>
+        </view>
+       <view class="address_wrap mt20">
+           <h4 class='fw_bold'>日常服务</h4>
+           <view>
+                <van-grid>
+                  <van-grid-item icon="service-o" color="#2093F9" text="销售入驻" bindtap="toSaleEnter"/>
+                  <van-grid-item icon="award-o" color="#2093F9" text="装修入驻" bindtap="toAddDecorate"/>
+                </van-grid>
+           </view>
+       </view>
+        <!-- 应用信息相关 -->
+        <view class="app_info_wrap">
+            <view class="app_info_item app_info_contact">
+                <text>客服QQ: </text>
+                <text>906653099</text>
+            </view>
+            <navigator class="app_info_item" url="/helpPackage/pages/feedback/feedback">
+                意见反馈
+            </navigator>
+            <navigator class="app_info_item" url="/helpPackage/pages/about/about">
+                关于我们
+            </navigator>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,97 @@
+/*推荐*/
+.loupan{
+  margin: 25rpx 0;
+}
+.hot-tuijian{
+  padding: 5rpx 20rpx;
+}
+.fc-co{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.fc-co h4 {
+  font-family: '黑体';
+  font-weight:bold;
+}
+.fc-co .more-loupan {
+  color:#757575;
+  font-size:26rpx;
+}
+
+.houses{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.house-box .h-image-box{
+  position:relative;
+}
+
+.h-image-box .view{
+  position: absolute;
+  bottom:10rpx;
+  left: 10rpx;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+}
+.house-box .thumbnail {
+  border-radius: 4rpx;
+}
+
+
+
+
+.house-name {
+  max-width: 200rpx;
+  width:200rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.house-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.house-info .address {
+  line-height: 30rpx;
+  padding: 3rpx 8rpx;
+  background:#42a5f5;
+  color: #fff;
+  border-radius: 6rpx;
+}
+.house-info .comment{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+
+}
+
+
+
+.jz-list{
+  width:100%;
+}
+.jizhuang-box{
+  display:flex;
+  padding: 20rpx 20rpx;
+  border-bottom: 1rpx dashed #ccc;
+}
+.jizhuang-box .image-box{
+  width:260rpx;
+}
+.jizhuang-box .info-box{
+  flex:1;
+}
+.phone{
+  top:40rpx;
+  right:50rpx;
+}

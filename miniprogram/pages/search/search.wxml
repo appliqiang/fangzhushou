@@ -1,0 +1,78 @@
+
+<navigation
+id='Navigation'
+show-icon='false'
+title="动态"
+>
+</navigation>
+
+<view class='container'>
+    <van-tabs active="{{active}}"  bind:change="onChange">
+        <!-- <van-tab title="动态">
+            <view class='co-padding'>
+                <view class='topics bg-eee' >
+                    <view class='topic-item co-padding2 mt20 bg-fff' wx:for="{{reqs}}" 
+                        wx:for-item="item" wx:key="index"
+                         data-id="{{item.id}}" bindtap="toTopicNews">
+                        <view class='title fs36'>
+                            <text wx:if="{{ item.type_id ==1  }}"  class="color-red">[ 购房 ]</text>
+                            <text wx:if="{{ item.type_id ==2  }}"  class="color-red">[ 售房 ]</text>
+                            <text wx:if="{{ item.type_id ==3  }}"  class="color-red">[ 求租 ]</text>
+                            <text wx:if="{{ item.type_id ==4 }}" class="color-red">[ 出租 ]</text>
+                           {{item.title}}
+                        </view>
+                        <view  class='images' wx:if="{{item.thumbnail.length }}">
+                              <view class='image-wrap mtl20' 
+                                    wx:for="{{item.thumbnail}}"  
+                                    wx:for-item="obj" 
+                                    wx:key="index"
+                                    style='background: #eee url({{obj}}) center center;background-repeat:no-repeat;background-size:contain;display:inline-block;padding:0 5rpx;'>
+                               </view>
+                        </view>
+                        <view class='mt20 flex-between' style="padding: 5rpx 20rpx;">
+                            <view class='fs32 user-info'>
+                                <image src="{{item.avatarUrl}}" style="width:40rpx;height:40rpx;border-radius:100%;"></image>
+                                <view class='ml20'>{{item.name}}</view>
+                            </view>
+                            <view class='color-middle-grep2 fs28'>{{item.add_date}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </van-tab> -->
+        <van-tab title="投票">
+            <view class="search">
+                <view class="search-container">
+                    <view class="search-left">
+                        <image class="search-image" src="/images/search.png" />
+                        <input class="search-input"  placeholder="请输入楼盘名称" bindinput='watchSearch'/>
+                    </view>
+                    <view class="search-btn" data-keywords="{{keywords}}" bindtap="go_to_search_result">搜索</view>
+                </view>
+            </view>
+            <view class='co-padding'>
+                 <view class='house-box flex-start mt10' wx:for="{{houses}}" 
+                        wx:for-item="item" wx:key="index"
+                         data-id="{{item.id}}">
+                    <view class='thumbnail'>
+                        <image src="{{item.thumbnail}}"></image>
+                    </view>
+                    <view class='info'>
+                        <view class='flex-start'>【 {{item.name}} 】 - {{item.address}}</view>
+                        <view class='vote flex-start mt30 mtl10'>
+                            <view class="color-orange-13 fs36" style="width:120rpx;" wx:if="{{item.score !=0}}">
+                                {{item.score}}分
+                            </view>
+                            <view wx:else class='fs28 color-orange-13'>没有投票</view>
+                            <view class='btn-vote ml50 color-fff flex-center' data-address="{{item.address}}"   data-id="{{item.id}}" data-name="{{item.name}}"  bindtap="toVote">投票</view>
+                        </view>
+                    </view>
+                 </view>
+            </view>
+        </van-tab>
+        <!-- <van-tab title="话题">
+            <view class='flex-center'>开发中</view>
+        </van-tab> -->
+    </van-tabs>
+</view>
+

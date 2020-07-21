@@ -1,0 +1,159 @@
+
+ 
+navigator{
+  display:inline;
+}
+.search {
+  height: 124rpx;
+  background-color: #2B8CED;
+  display: flex;
+  justify-content: center;
+}
+.search-container {
+  margin-top: 30rpx;
+  height: 64rpx;
+  margin-left:22rpx;
+  margin-right:33rpx;
+  width: 695rpx;
+  display: flex; 
+}
+.search-left {
+  display: flex;
+  background-color: #FFFFFF;
+  border-radius: 32rpx;
+}
+.search-input  {
+  height: 64rpx;
+  line-height: 64rpx;
+  font-size: 28rpx;
+  width: 500rpx;
+}
+.search-image {
+  width:34rpx;
+  height: 34rpx;
+  margin-left: 30rpx;
+  margin-top:15rpx;
+  margin-right: 15rpx;
+}
+
+.search-btn {
+  font-size: 32rpx;
+  line-height: 64rpx;
+  font-weight: bold;
+  color:#fff;
+  text-align: center;
+  margin-left:30rpx;
+}
+/*顶部轮播图*/
+.top-add .slideshowView{
+  height: 220rpx;
+  width: 100%;
+  background-color: lightgrey
+}
+.top-add .slideshowView{
+  height:220rpx;
+  width: 100%;
+}
+.top-add .swiper-item{
+  display: block;
+  height: 220rpx;
+  width: 100%;
+}
+
+
+
+
+
+/*列表*/
+.f-list {
+  width:100%;
+  background: #fff;
+  padding: 10rpx 10rpx;
+}
+.f-list .tips {
+  color: #BFBFB9;
+}
+.item-box{
+  padding: 10rpx 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 2rpx solid #ccc;
+}
+.item-image{
+  position:relative;
+  justify-content: center;
+  align-items: center;
+  flex-basis:200rpx;
+}
+.item-image .thumbnail{
+  width:200rpx;
+  height:150rpx;
+  border-radius:6rpx;
+}
+
+.item-image .view{
+  position: absolute;
+  bottom:10rpx;
+  left: 10rpx;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+}
+.item-image .cover-bg{
+  position: absolute;
+  bottom:0;
+  left: 0;
+  top: 0;
+  right:0;
+  z-index: 2;
+  background:rgba(0,0,0,.2);
+}
+.item-image .cover-bg:hover {
+  background:rgba(0,0,0,.11);
+}
+
+.item-des{
+    height:100%;
+    overflow:hidden;
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    padding: 10rpx 20rpx;
+}
+.item-des .price{
+  color: #f2826a;
+}
+
+
+.item-des .address{
+  color:#B3B3B3;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+
+
+
+.tabs{
+  border-bottom:1rpx solid #ccc;
+}
+.filters{
+  padding: 15rpx 10rpx;
+}
+.filters view {
+/*  width:100rpx;*/
+  line-height: 30rpx;
+  padding: 5rpx 8rpx;
+  background: #E0E0E0;
+  cursor:pointer;
+}
+.filters view.active {
+  background: #AAD1F7;
+}
+
+

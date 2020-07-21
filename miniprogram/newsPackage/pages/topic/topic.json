@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "navsearch": "/components/navsearch/navsearch",
+        "v-selectImage": "/components/select-image/index"
+    },
+    "navigationBarTitleText": "发布话题"
+
+}

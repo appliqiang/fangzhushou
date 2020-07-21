@@ -1,0 +1,90 @@
+<!--hall.wxml-->
+<navsearch id='navsearch' title="热门楼盘" show-icon='false'></navsearch>
+
+<view class='container'>
+  <view class="search">
+    <view class="search-container">
+        <view class="search-left">
+            <image class="search-image" src="/images/search.png" />
+            <input class="search-input"  placeholder="请输入楼盘名称" bindfocus='watchSearch'/>
+        </view>
+        <view class="search-btn" data-keywords="{{keywords}}" bindtap="go_to_search_result">搜索</view>
+    </view>
+  </view>
+  <view class='top-add slideshowView_bg'>
+    <swiper class='slideshowView' indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}" vertical="{{false}}" interval="2000" duration="500" previous-margin="0px" next-margin="0">
+       <view wx:for="{{banners}}" wx:key="index">
+        <swiper-item>
+            <image class="swiper-item" src="{{item}}"></image>
+        </swiper-item>
+      </view>
+    </swiper>
+  </view>
+  <view class='tabs'>
+    <van-dropdown-menu>
+      <van-dropdown-item bindchange="changeAddress"  value="{{ addressValue }}" options="{{ addressOption }}" />
+      <van-dropdown-item bindchange="changePrice"  value="{{ priceValue }}" options="{{ priceOption }}" />
+      <van-dropdown-item bindchange="changeHuxing" value="{{ huxingValue }}" options="{{ huxingOption }}" />
+      <van-dropdown-item bindchange="changeArea" value="{{ areaValue }}" options="{{ areaOption }}" />
+      <!-- <van-dropdown-item id="item" title="{{ moreTabTitle }}">
+          <van-button type="info" block >
+            确定
+          </van-button>
+        </van-dropdown-item> -->
+    </van-dropdown-menu>
+  </view>
+  <view class='filters co-padding flex-start'>
+    <view  wx:for="{{filterArr}}" 
+            wx:for-item="item"  
+            data-index="{{index}}"
+            bindtap='chooseFilter'
+            class="radius5 fs24 dark-blue {{ index!=0 ? 'mtl10':''  }} {{ activeFilter ===index ? 'active':''  }}" 
+            wx:key="id" >
+      {{item.name}}
+    </view>
+  </view>
+  <view class='f-list mt10'>
+    <text class='tips fs24'>以下根据楼盘实时数据进行排序</text>
+    <view class='item-box' wx:for="{{newPersonData}}" wx:for-item="item" wx:key="index" data-id="{{item.id}}" bindtap="viewHouseDetail">
+      <view class='item-image'>
+        <image class='thumbnail' src='{{item.avatar}}'></image>
+        <view class='view'>
+            <image src='../../images/view.png' style='width:40rpx;height:30rpx;'></image>
+            <text class='fs20 color-light-grep'>{{item.view}}</text>
+         </view>
+         <view class='cover-bg'></view>
+      </view>
+      <view class='item-des'>
+        <view class='name fs32'>{{item.name}}</view>
+        <view class='address mt15 fs24'>
+          <text>{{item.address}}</text>
+          <text class='mtl20'>交房日期:{{item.date}}</text>
+        </view>
+        <view class='price mt10' wx:if="{{item.types.length > 0 }}">
+            <span wx:for="{{item.types}}" wx:for-item="type" wx:key="index" class="{index !=0 ? 'mtl10':''}">
+             {{type}}
+            </span>
+        </view>
+        <view wx:else>  
+           待定价格
+        </view>
+        <view class='tags mt10'  wx:if="{{item.tags.length > 0 }}">
+            <van-tag text-color="#8EA9C5" color="#D9F0FF" wx:for="{{item.tags}}" wx:for-item="tag" wx:key="index" class="{index !=0 ? 'mtl10':''}">
+               {{tag}}
+            </van-tag>
+        </view>
+        <view wx:else>
+          <van-tag text-color="#8EA9C5" color="#D9F0FF" >
+              宜居房产
+            </van-tag>
+        </view>
+        <!-- <view class='other mt10'>4</view> -->
+      </view>
+    </view>
+  </view>
+
+</view>
+
+
+
+

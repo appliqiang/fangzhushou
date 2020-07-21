@@ -1,0 +1,51 @@
+<navsearch id='navsearch' title="发布话题" show-icon='false'></navsearch>
+<view class="container">
+    <view class="flex-center h-topic">
+        <radio-group class="radio-group" value="{{topic_id}}" bindchange="radioChange">
+              <label class="radio" >
+                  <radio value="1" checked=""/>求购
+              </label>
+              <label class="radio" >
+                 <radio value="2" checked=""/>出售
+              </label>
+              <label class="radio" >
+                  <radio value="3" checked=""/>求租
+              </label>
+              <label class="radio" >
+                 <radio value="4" checked=""/>出租
+              </label>
+          </radio-group>
+    </view>
+    <view class="addition-title">
+        <input class="addition-input" focus="{{focus}}" placeholder="请填写标题" data-title='title' value="{{title}}" bindinput="titleChange"></input>
+    </view>
+    <view class="addition-title">
+        <input class="addition-input" focus="{{focus}}" placeholder="联系电话" data-phone='phone' value="{{phone}}" bindinput="phoneChange"></input>
+    </view>
+    <view class="addition-content">
+        <textarea class="addition-input" placeholder="请描述话题内容(选填)" data-name='content' value="{{content}}" bindinput="contentChange">
+        </textarea>
+    </view>
+    <view class='co-padding up-box mt30' >
+        <view class='label fs32'>上传图片或者微信(每次选择一个图片)</view>
+        <view class='upload-pic mt30'>
+          <view class="question-images flex-start">
+            <v-selectImage imageNumber="{{selectImageNumber}}"  imagePath="xcx/req/"  bind:getImageList="getImageList" isSelect="{{isFirst?'':true}}" selectImageList="{{selectImageList}}" /> 
+            
+            <!-- <block wx:for="{{images}}" wx:key="*this">
+              <view class="q-image-wrap">
+                <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+                <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">
+                  <image src="../../images/remove.png" style="width:30rpx;height:30rpx;"></image>
+                </view>
+              </view>
+            </block>
+            <view class='uploadImgBtn' bindtap="chooseImage" wx:if="{{images.length < 6}}">
+              <image src="../../images/add.png" style="width:30rpx;height:30rpx;"></image>
+            </view> -->
+          </view>
+        </view>
+    </view>
+
+    <view class="submit flex-center bg-dark-blue" hover-class="on-submit" bind:tap="submit">发布</view>
+</view>

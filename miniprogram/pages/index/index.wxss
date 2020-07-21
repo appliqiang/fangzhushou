@@ -1,0 +1,122 @@
+page {
+  background-color: #edece8;
+}
+.user_info_wrap {
+  height: 28vh;
+  overflow: hidden;
+  background-color: #2B8CED;
+  position: relative;
+}
+.user_info_wrap .user_img_wrap .user_info {
+/*  width:400rpx;*/
+  position: absolute;
+  left: 30%;
+  transform: translateX(-50%);
+  top: 25%;
+  text-align: center;
+}
+.user_info_wrap .user_img_wrap .user_icon {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+}
+.user_info_wrap .user_img_wrap .user_name {
+  max-width:260rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: white;
+  margin-top: 40rpx;
+  font-size: 40rpx;
+}
+.user_info_wrap .user_btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40%;
+  border: 1px solid greenyellow;
+  color: greenyellow;
+  font-size: 38rpx;
+  padding: 30rpx;
+  border-radius: 10rpx;
+}
+.user_content {
+  position: relative;
+}
+.user_content .user_main {
+  color: #555555;
+  padding-bottom: 75rpx;
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -68rpx;
+}
+.user_content .user_main .history_wrap {
+  padding: 5rpx 20rpx 10rpx 20rpx;
+  border-radius: 15rpx 15rpx 0 0 ;
+  background-color: white;
+  /*display: flex;*/
+}
+.user_content .user_main .history_wrap navigator {
+  flex: 1;
+  text-align: center;
+  padding: 10rpx 0;
+}
+.user_content .user_main .history_wrap navigator .his_num {
+  color: var(--themeColor);
+}
+
+.user_content .user_main .address_wrap {
+  margin-top: 30rpx;
+  background-color: #fff;
+  padding: 20rpx;
+}
+.user_content .user_main .app_info_wrap {
+  margin-top: 30rpx;
+  background-color: #fff;
+}
+.user_content .user_main .app_info_wrap .app_info_item {
+  border-bottom: 1px solid #ccc;
+  padding: 20rpx;
+}
+.user_content .user_main .app_info_wrap .app_info_contact {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user_name button{
+  width: 250rpx;
+  padding: 8rpx 8rpx;
+}
+
+
+
+
+
+
+.inner{
+    width: 500rpx;
+    margin-left: 50rpx;
+    margin-top:100rpx;
+    display:flex;
+    align-items: center;
+  }
+
+  .nickname{
+    display: inline-block;
+    max-width:280rpx;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-left:50rpx;
+  }
+  .user_icon {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+}
+.nickname button:not([size='mini']) {
+  width: auto;
+  background: transparent;
+}

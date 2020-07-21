@@ -1,0 +1,73 @@
+<!--hall.wxml-->
+<navsearch id='navsearch' title="楼盘新闻" show-icon='false'></navsearch>
+<view class='container bg-ccc'>
+	<view class='bg-fff  co-padding2'>
+		<h2 class='fs32 fw_bold title t-center'>{{title}}</h2>
+		<view class='flex-start mt30'>
+			<view class='publish-avatar'>
+				<image src="../../images/logo.png" style='width:65rpx;height:65rpx;border-radius:100%;'></image>
+			</view>
+			<view class='publish-info ml20'>
+				<text>VIP房助手</text>
+				<view class='mt10 fs24 color-middle-grep2'>
+					<text>{{date}}</text>
+					<text class='ml20'>{{type.name}}</text>
+					<text class='ml20'>浏览次数: {{view}}</text>
+				</view>
+			</view>
+		</view>
+		<view class='mt20'>
+			<rich-text nodes="{{content}}"></rich-text>
+		</view>
+		<view class='mt30 flex-start'>
+			<view class='flex-start share-f' style="width:60rpx;">
+				<image src="../../images/zan.png" style="width:32rpx;height:32rpx"></image>
+			    <text class='fs24 ml10 color-middle-grep2'>2</text>
+			</view> 
+			<view class='flex-start share-f ml20 relative'  style="width:120rpx;">
+				<image src="../../images/f.png" style="width:32rpx;height:32rpx"></image>
+			    <text class='fs24 ml20 color-middle-grep2'>转发</text>
+			     <button open-type='share' data-title="碧桂园啊" data-id="{{news_id}}"></button>
+			</view>
+		</view>
+	</view>
+	<view class='mt10 bg-fff co-padding2'>
+		 <!-- 行业新闻 -->
+		  <view class='hot-tuijian loupan'>
+		      <view class='flex-start'>
+		        <h4 class='fw_bold fs36'>行业新闻</h4>
+		      </view>
+		      <view class='houses mt20 flex-around'>
+		        <view class='f-list bg-fff'>
+		          <view class='item-box flex-center'  wx:for="{{newsData}}" 
+		                wx:for-item="item" wx:key="id" 
+		                data-id="{{item.id}}" bindtap="viewNewsDetail">
+		            <view class='item-des'>
+		              <view class='p-info'>
+		                <text class='p-name fs32'>{{item.title}}</text>
+		                <view class='p-school flex-between fs28 mt15'>
+		                   <view class='mt10 fs24 color-middle-grep2'>
+								<text>房管家</text>
+								<text class='ml20'>{{item.add_date}}</text>
+								<text class='ml20'>浏览次数: {{item.view}}</text>
+							</view>
+		                </view>
+		              </view>
+		            </view>
+		            <view class='item-image'>
+		              <image src='{{item.thumbnail}}'></image>
+		            </view>
+		          </view>
+		        </view>
+		      </view>
+		  </view>
+	</view>
+</view>
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+  	"navsearch": "/components/navsearch/navsearch",
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu",
+    "van-dropdown-item": "@vant/weapp/dropdown-item",
+    "van-tag": "@vant/weapp/tag"
+  },
+  "disableScroll": false
+}
