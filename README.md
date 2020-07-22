@@ -1,8 +1,8 @@
 # VIP房产小程序
 
-### 项目介绍
+### 项目名称：  VIP房助手
 
-
+小程序搜索：【 VIP房助手  】
 
 
 VIP房产小程序是一款 php + vue 的前后端分离的房产系统。主要优点是开发、部署方便、友好用户体验、代码结构清晰完整。目前支持网页端和微信小程序，能覆盖到PC和手机，以及iPad等设备。
@@ -66,7 +66,8 @@ VIP房产小程序是一款 php + vue 的前后端分离的房产系统。主要
 Vant UI主题样式
 
 ### 部分截图展示：
-![avatar](https://fengniaocloud.oss-cn-shanghai.aliyuncs.com/xcx/use/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20200722080043.png)
+ <img src="https://fengniaocloud.oss-cn-shanghai.aliyuncs.com/xcx/use/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20200722080043.png" width = "500" height = "300" alt="首页" align=center />
+
 
 
 
