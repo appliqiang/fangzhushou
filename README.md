@@ -1,4 +1,4 @@
-<center>![](https://fengniaocloud.oss-cn-shanghai.aliyuncs.com/xcx/use/code.jpg)</center>
+![](https://fengniaocloud.oss-cn-shanghai.aliyuncs.com/xcx/use/code.jpg)
 
 
 
