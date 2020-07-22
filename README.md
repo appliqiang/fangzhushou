@@ -86,11 +86,8 @@ Vant UI主题样式
 
 ![](https://fengniaocloud.oss-cn-shanghai.aliyuncs.com/xcx/use/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20200722080249.png)
 
-
-
-
 ------------
 
 ![](https://fengniaocloud.oss-cn-shanghai.aliyuncs.com/xcx/use/wx20200722091011.jpg)
-
+------------
 ![](https://fengniaocloud.oss-cn-shanghai.aliyuncs.com/xcx/use/code.jpg)
